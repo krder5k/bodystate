@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Salsa-regular';
+  src: url('fonts/Salsa-Regular.ttf') format('truetype'),
+       url('fonts/Salsa-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  background-color: #edf1f7;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+  min-height: 100vh;
+  
+}
+
+header {
+  background-color: #139973;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Salsa-regular', sans-serif;
+  padding: 10px 100px; /* Добавлено немного отступа */
+  align-items: center;
+}
+
+#human-body {
+  position: relative; /* Добавьте это, если еще не добавлено */
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  display: block;
+  border: 3px solid #d3d3d3;
+  border-radius: 50%;
+  cursor: none;
+  width: 200px; /* Size */
+  height: 200px;
+  z-index: 1000;
+}
+
+.magnifier-container {
+  position: absolute; /* or absolute, depending on layout */
+  left: 20px; /* Adjust based on desired distance from the left edge */
+  top: 20%; /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
+  display: none; /* Initially hidden */
+}
+
+.logout-container button {
+  background-color: #139973; /* Красный цвет для кнопки */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.button-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 6px;
+}
+
+/* https://www.flaticon.com/ru/authors/sonnycandra */
+
+/* .logout-container button:hover {
+  background-color: #bf212f; 
+} */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px 100px;
+  box-sizing: border-box;
+  
+}
+
+.left-side {
+  background-color:white;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 0.5fr 5fr 0.5fr;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 20px;
+ 
+}
+
+#muscular, #cardiovascular, #skeletal, #nervous {
+  border-color: white;
+  color: #565656;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.right-side {
+  background-color: white;
+  display: grid;
+  grid-template-rows: 2fr 2fr 2fr;
+  gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.rectangle {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center; /* centers items horizontally */
+  align-items: center;
+}
+
+.img-body {
+   height: auto;
+   padding: 20px;
+   max-width: 40%;
+}
+#human-body {
+  grid-column: span 4;
+}
+
+.img-progress {
+  height: auto;
+  max-width: 90%;
+}
+
+#progress {
+  grid-column: span 3;
+}
+@media (max-width: 828px) {
+    .container {
+      grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+  
+    .left-side {
+      grid-row: 1; /* Move the left side content below the right side content */
+    }
+  
+    .right-side {
+      grid-row: 2; /* Move the right side content above the left side content */
+    }
+  }

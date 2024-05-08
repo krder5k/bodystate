@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<title>Two-Part Layout</title>
+</head>
+<body>
+  <header>
+    <h1>Body State</h1>
+    <div class="logout-container">
+      <button onclick="logout()">
+      <img src="logout.png" alt="Logout" class="button-icon">Logout</button>
+  </div>
+  </header>
+  
+  <div class="container">
+    <div class="left-side">
+      <div class="rectangle" id="muscular">Muscular system</div>
+      <div class="rectangle" id="cardiovascular">Сardiovascular system</div>
+      <div class="rectangle" id="skeletal">Skeletal system</div>
+      <div class="rectangle" id="nervous">Nervous system</div>
+      <div class="rectangle" id="human-body">
+        
+        <img class="img-body" id="myimage" src="Muscular_1.svg" alt="">
+        <div class="magnifier-container">
+          <div class="img-magnifier-glass"></div>
+        </div>
+      </div>
+      <div class="rectangle" id="progress">
+        <img class="img-progress" src="img/progress.png" alt="">
+      </div>
+      <div class="rectangle"></div>
+    </div>
+  
+    <div class="right-side">
+      <div id="activity-data" class="rectangle">
+        <p>Loading activity data...</p>
+      </div>
+      <div class="rectangle">Heart Rate</div>
+      <div id="sleep-data" class="rectangle">
+        <p>Loading sleep data...</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="magnifier-container">
+    <div class="img-magnifier-glass"></div>
+  </div>
+
+
+  <script src="login.js"></script>
+  <script src="script.js"></script>
+  
+  
+</body>
+
+</html>
