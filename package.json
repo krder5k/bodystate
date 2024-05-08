@@ -4,6 +4,7 @@
   "description": "A system for visualizing body systems",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "jest"
   },
   "author": "Kristina Deryagina",
@@ -14,9 +15,6 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.4"
   },
-  "scripts": {
-    "start": "node server.js"
-}
   "devDependencies": {
     "jest": "^29.7.0"
   },
