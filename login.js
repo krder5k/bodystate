@@ -8,7 +8,9 @@ function login() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value
     })
     .then(response => response.json())
     .then(data => {
