@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           imageElement.src = 'Muscular_1.svg';
           break;
             case 'cardiovascular':
-                imageElement.src = 'Cardio_1.svg';
+                imageElement.src = 'Cardiovascular_1.svg';
                 break;
             case 'skeletal':
                 imageElement.src = 'Skeletal_1.svg';
