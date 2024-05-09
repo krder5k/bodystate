@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         fetchAndDisplaySleepData();
     } else {
         // Redirect to login page if URLs are not set in localStorage
-        window.location.href = 'https://krder5k.github.io/bodystate/login.html'; // Замените на URL вашей страницы входа
+        window.location.href = 'login.html'; // Замените на URL вашей страницы входа
     }
   });
   
