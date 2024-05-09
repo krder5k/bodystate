@@ -3,7 +3,7 @@ function login() {
     const password = document.getElementById('password').value;
 
     // Send a request to your server
-fetch('https://bodystate.azurewebsites.net', {
+fetch('https://bodystate.azurewebsites.net/login', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
