@@ -19,19 +19,18 @@ app.use((req, res, next) => {
 
 
 
-// MongoDB Connection
-mongoose.connect('mongodb+srv://kristinaderyagina:testuser1@cluster0.etwheso.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+// MongoDB Connection using Environment Variable
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define a Mongoose schema and model for Users
 const userSchema = new mongoose.Schema({
-    username:  { type: String, required: true },
+    username: { type: String, required: true },
     password: { type: String, required: true },
     stepsUrl: String,
     sleepUrl: String,
     fiwareService: String,
     fiwareServicePath: String,
 });
-
 const User = mongoose.model('User', userSchema);
 
 // Serve your local website using Express static middleware
