@@ -3,7 +3,7 @@ function login() {
     const password = document.getElementById('password').value;
 
     // Send a request to your server
-    fetch('http://localhost:8080/login', { // Use the correct route for the login endpoint
+    fetch('https://bodystate.azurewebsites.net/login.html', { // Use the correct route for the login endpoint
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ function login() {
             console.log('Saved sleepUrl:', data.sleepUrl);
             localStorage.setItem('fiwareService', data.fiwareService);
             localStorage.setItem('fiwareServicePath', data.fiwareServicePath);
-            window.location.href = 'http://localhost:8080/';
+            window.location.href = '/index.html';
         } else {
             // Handle login failure
             alert('Login failed!');
