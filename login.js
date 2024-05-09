@@ -33,7 +33,7 @@ fetch('https://bodystate.azurewebsites.net/login', {
 .catch((error) => {
     console.error('Error:', error);
 });
-
+}
 
 // function login() {
 //     const username = document.getElementById('username').value;
