@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 
+
 // Enable CORS for all routes
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -39,7 +40,7 @@ app.use(express.static(localWebsitePath));
 
 
 // Create a route to handle requests to your main page (now serving login.html)
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.sendFile(path.join(localWebsitePath, 'login.html')); // Update this line to point to login.html
 });
 
