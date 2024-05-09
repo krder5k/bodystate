@@ -35,13 +35,13 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // Serve your local website using Express static middleware
-const localWebsitePath = path.join(__dirname, ''); // Change this line
+const localWebsitePath = path.join(__dirname, 'public'); // Change this line
 app.use(express.static(localWebsitePath));
 
 
-// Create a route to handle requests to your main page (index.html)
+// Create a route to handle requests to your main page (now serving login.html)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(localWebsitePath, 'C:\Users\Tina\Desktop\BodySystems_backend\index.html'));
+    res.sendFile(path.join(localWebsitePath, 'login.html')); // Update this line to point to login.html
 });
 
 // Route for handling login with explicit CORS headers
