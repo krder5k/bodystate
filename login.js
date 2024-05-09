@@ -3,7 +3,7 @@ function login() {
     const password = document.getElementById('password').value;
 
     // Send a request to your server
-    fetch('https://bodystate.azurewebsites.net/login.html', { // Use the correct route for the login endpoint
+    fetch('https://bodystate.azurewebsites.net/login', { // Use the correct route for the login endpoint
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
