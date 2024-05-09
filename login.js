@@ -3,7 +3,7 @@ function login() {
     const password = document.getElementById('password').value;
 
     // Send a request to your server
-fetch('https://bodystate.azurewebsites.net/login', {
+fetch('https://bodystate.azurewebsites.net/login.html', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ body: JSON.stringify({ username, password })
         console.log('Saved sleepUrl:', data.sleepUrl);
         localStorage.setItem('fiwareService', data.fiwareService);
         localStorage.setItem('fiwareServicePath', data.fiwareServicePath);
-        window.location.href = 'https://bodystate.azurewebsites.net/';
+        window.location.href = 'index.html/';
     } else {
         // Handle login failure
         alert('Login failed!');
