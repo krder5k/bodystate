@@ -34,7 +34,7 @@ const User = mongoose.model('User', userSchema);
 app.use(express.static(__dirname));
 
 // Create a route to handle requests to the login page
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'login.html')); // Make sure the path is directly pointing to the root directory
 });
 
