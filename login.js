@@ -32,14 +32,6 @@ function login() {
     });
 }
 
-        // Handle login failure
-        alert('Login failed!');
-    }
-})
-.catch((error) => {
-    console.error('Error:', error);
-});
-}
 
 // function login() {
 //     const username = document.getElementById('username').value;
