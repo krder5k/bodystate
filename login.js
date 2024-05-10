@@ -2,7 +2,7 @@ function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    fetch('https://bodystate.azurewebsites.net/login', {
+    fetch('/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
